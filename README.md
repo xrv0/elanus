@@ -4,6 +4,9 @@ elanus is a wifi fpv car powered by Raspberry Pi 🍓
 
 ## Installation
 
+### Connect the drive rand the motors according to the circuit below.
+![Circuit](https://raw.githubusercontent.com/xrv0/elanus/master/Elanus_circuit.jpg)
+
 ### Download the project and install dependencies
 
 ```bash
