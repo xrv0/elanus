@@ -1,4 +1,4 @@
-# 🏎️ elanus
+# elanus 🏎️ 
 
 elanus is a wifi fpv car powered by Raspberry Pi 🍓
 
