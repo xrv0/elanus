@@ -1,0 +1,4 @@
+websockets
+flask
+gpiozero
+mpu6050-raspberrypi
