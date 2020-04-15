@@ -1,0 +1,10 @@
+body {
+    align-content: center;
+    background: #121212;
+    color: white;
+}
+
+#video-stream {
+    border-radius: 5px;
+    border: solid 2px green;
+}
