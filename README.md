@@ -40,6 +40,7 @@ Run the following command to start the frontend aswell as the backend
 ```bash
 python3 main.py
 ```
+Open your browser and navigate to http://YOUR-PIs-IP-ADRESS:5000
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
