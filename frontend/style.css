@@ -1,10 +1,24 @@
 body {
-    align-content: center;
-    background: #121212;
-    color: white;
+    display: flex;
+    justify-content: center;
+    background: #222;
+    color: #c8c8c8;
+    font-size: 17px;
+    font-weight: 400;
+    font-family: 'Share Tech Mono', Monospace, Courier;
+    letter-spacing: 0.1px;
+}
+
+.title {
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: #FFF;
 }
 
 #video-stream {
+    justify-self: center;
     border-radius: 5px;
-    border: solid 2px green;
+    border: solid 3px #1f1f1f;
+    margin: 20px;
 }

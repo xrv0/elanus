@@ -22,10 +22,10 @@ document.querySelectorAll(".control-button").forEach((button) => {
     }
     button.onmouseup = () => {
         const key = button.id;
-        if(!fired[key]) {
+        if(fired[key]) {
             if(key in commands) {
-                fired[key] = true;
-                sendCommand(commands[key]);
+                fired[key] = false;
+                sendCommand("stop_" + commands[key]);
             }
         }
     }

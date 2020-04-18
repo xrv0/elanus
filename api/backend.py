@@ -14,7 +14,6 @@ async def handle(message, websocket):
     command = message.split(":")[1]
 
     if type == "command":
-        print(command)
         if command.startswith("stop_"):
             motor_manager.stop()
         else:
@@ -26,11 +25,6 @@ async def handle(message, websocket):
                 motor_manager.left()
             elif command == "right":
                 motor_manager.right()
-    elif type == "get":
-        if command == "gyro":
-            await websocket.send(mpu6050.get_gyro_data())
-        elif command == "signal":
-            await websocket.send("Nothing")
 
 
 def start():
