@@ -52,6 +52,7 @@ document.addEventListener("keyup", (event) => {
 })
 
 function sendCommand(command) {
+    log("Send command:" + command)
     websocketConnection.send("command:" + command);
 }
 
@@ -64,3 +65,15 @@ websocketConnection.onmessage = (event) => {
 }
 
 videoStream.src = "http://" + window.location.hostname + ":" + videoStreamPort;
+
+const logMessages = new Array()
+const console = document.getElementById("debug-console")
+function log(message) {
+    let date = new Date().toLocaleTimeString()
+    logMessages.push(`[${date}]: ${message}`)
+
+    console.innerText = ""
+    logMessages.forEach((message) => {
+        console.innerText = console.innerText + message + "\n"
+    })
+}
