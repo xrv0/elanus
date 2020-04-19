@@ -10,6 +10,8 @@ const commands = {
     ArrowRight: "right"
 }
 
+videoStream.src = "http://" + window.location.hostname + ":" + videoStreamPort;
+
 document.querySelectorAll(".control-button").forEach((button) => {
     button.onmousedown = () => {
         const key = button.id;
@@ -56,18 +58,13 @@ function sendCommand(command) {
     websocketConnection.send("command:" + command);
 }
 
-websocketConnection.onopen = () => {
-    websocketConnection.send("get:signal")
-}
-
 websocketConnection.onmessage = (event) => {
-    console.log(event.data)
+    log("Received " + event.data)
 }
-
-videoStream.src = "http://" + window.location.hostname + ":" + videoStreamPort;
 
 const logMessages = new Array()
 const console = document.getElementById("debug-console")
+
 function log(message) {
     let date = new Date().toLocaleTimeString()
     logMessages.push(`[${date}]: ${message}`)
