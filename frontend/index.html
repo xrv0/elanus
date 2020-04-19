@@ -1,16 +1,23 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <title>Elanus Main</title>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
     <script defer src="main.js"></script>
-    <title>Elanus Controller</title>
+    <link async href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link async rel="stylesheet" href="style.css">
 </head>
 <body>
+<div id="info-panel">
+    <p id="signal-level"></p>
+    <p id="signal-quality"></p>
+</div>
 <div id="control-panel">
     <h1 class="title">Control panel</h1>
     <p>Use arrow keys or the buttons below to navigate</p>

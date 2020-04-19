@@ -1,12 +1,13 @@
 body {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     background-color: #222;
     color: #c8c8c8;
     font-size: 17px;
     font-weight: 400;
     font-family: 'Share Tech Mono', Monospace, Courier;
     letter-spacing: 0.1px;
+    padding: 10px;
 }
 
 .title {
@@ -17,7 +18,6 @@ body {
 }
 
 #control-buttons {
-    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -45,8 +45,18 @@ body {
     margin: 20px;
 }
 
+@media (max-width: 1000px) {
+    #debug-console {
+        display: none;
+    }
+}
+
+#info-panel {
+    width: 25vw;
+}
+
 #debug-console {
-    width: 20vw;
+    width: 25vw;
     border-radius: 5px;
     border: solid 3px #1f1f1f;
     margin: 20px;
