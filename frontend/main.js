@@ -1,4 +1,4 @@
-const websocketConnection = new WebSocket("ws://" + window.location.hostname + ":3000");
+const websocketConnection = new ReconnectingWebSocket("ws://" + window.location.hostname + ":3000");
 const videoStream = document.getElementById("video-stream");
 const videoStreamPort = 8081;
 
@@ -60,6 +60,10 @@ class Main {
         })
 
         websocketConnection.onmessage = this.handleMessage;
+
+        websocketConnection.onclose = () => {
+
+        }
 
         this.signalLevelDisplay = document.getElementById("signal-level")
         this.signalQualityDisplay = document.getElementById("signal-quality")

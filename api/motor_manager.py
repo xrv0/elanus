@@ -4,9 +4,14 @@ IN_1 = 17
 IN_2 = 22
 IN_3 = 23
 IN_4 = 24
+INVERSE = True
 
-right_motor = Motor(forward=IN_1, backward=IN_2)
-left_motor = Motor(forward=IN_3, backward=IN_4)
+if INVERSE:
+    right_motor = Motor(forward=IN_2, backward=IN_1)
+    left_motor = Motor(forward=IN_4, backward=IN_3)
+else:
+    right_motor = Motor(forward=IN_1, backward=IN_2)
+    left_motor = Motor(forward=IN_3, backward=IN_4)
 
 
 def forward():
